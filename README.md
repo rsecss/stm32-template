@@ -6,7 +6,7 @@
 
 ## 目录结构（标准库）
 
-**说明：** 我使用的基础工程模板目录结构主要有以下两种，分别是 Template1 和 Template2 选择哪一种目录结构进行构建工程看个人喜好，但是我更加推荐 Template1 这种目录结构，而第三个模板则是在第一个模板上面的进行修改，同时下面的目录结构为大体框架，个人也可以根据实际情况进行调整，当然也可以参考以下两篇博客的配置方法教程
+**说明：** 我使用的基础工程模板目录结构主要有以下两种，分别是 Template1 和 Template2 选择哪一种目录结构进行构建工程看个人喜好，但是我更加推荐 Template1 这种目录结构。而 Template3 则是在第一个模板上面的进行修改，加了一些驱动函数，方便后序调试和拓展开发，同时下面的目录结构为大体框架，个人也可以根据实际情况进行调整，当然也可以参考以下两篇博客的配置方法教程：
 
 1. [手把手带你从零开始搭建工程（标准库版）——@程亦寻](https://blog.csdn.net/debug602/article/details/141183452)
 2. [用keil5新建STM32工程（超详细的图解操作）——@小治成长记](https://blog.csdn.net/qq_45390365/article/details/109016433)
@@ -32,7 +32,7 @@
 4. 最后进入 Target 设置界面，选择 ARM 编译器`Use default compiler version 5`，不能选择默认的`Use default compiler version 6`，这样会导致编译不成功
 5. keilkill.bat 是批处理文件，主要是为了方便分享工程时，可以清除编译产生的中间文件，这个可选，具体看个人
 
-### 基础工程（Template2）
+### 基础工程（Template1）
 
 ```markdown
     |-- Start           # 存放内核函数和启动文件
@@ -44,9 +44,9 @@
     |-- keilkill.bat    # 批处理清除编译产生的中间文件（可选）
 ```
 
-**注意事项：**同 Template，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹假如相关的文件
+**说明：** 同 Template，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹假如相关的文件
 
-### OLED 显示屏
+### OLED 显示屏（Template2）
 
 ```markdown
     |-- CMSIS           # 存放内核函数及启动文件
@@ -68,10 +68,13 @@
     |-- keilkill.bat    # 批处理清除编译产生的中间文件（可选）
 ```
 
-**注意事项：** 只需要在 Template 基础项目工程文件中的 DRIVERS 文件夹中添加
-LED、OLED、Key 相关的驱动函数就能实现驱动简单的 OLDE 显示屏
+**说明：** 该模板只需要在 Template 基础项目工程文件中的 DRIVERS 文件夹中添加
+LED、OLED、Key [相关的驱动函数](./OLED)就能实现驱动简单的 OLED 显示屏进行调试和拓展开发
 
-## 资料参考下载
+## 资料下载参考
 
-1. [Arm Keil | Devices-标准库](https://www.keil.arm.com/devices/)
-1. [资料下载——@江协科技](https://jiangxiekeji.com/download.html)
+1. [Arm Keil | Devices-标准库下载](https://www.keil.arm.com/devices/)
+2. [资料下载——@江协科技](https://jiangxiekeji.com/download.html)
+
+## 感谢
+
