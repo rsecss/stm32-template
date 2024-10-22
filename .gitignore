@@ -1,0 +1,14 @@
+# vscode
+Template/.vscode/*
+!Template/.vscode/settings.json
+
+# Obj
+Template/Listings
+Template/Objects
+Template/DebugConfig
+
+# Project
+Template/STM32*
+
+# My Config
+!.gitignore
