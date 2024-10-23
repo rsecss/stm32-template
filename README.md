@@ -11,7 +11,7 @@
 1. [手把手带你从零开始搭建工程（标准库版）——@程亦寻](https://blog.csdn.net/debug602/article/details/141183452)
 2. [用keil5新建STM32工程（超详细的图解操作）——@小治成长记](https://blog.csdn.net/qq_45390365/article/details/109016433)
 
-### [基础工程（Template）](./Template)
+### [基础工程（Template）](./Template/Template1)
 
 ```markdown
     |-- CMSIS           # 存放内核函数及启动文件
@@ -44,7 +44,7 @@
     |-- keilkill.bat    # 批处理清除编译产生的中间文件（可选）
 ```
 
-**说明：** 同 Template，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹假如相关的文件
+**说明：** 同 Template1，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹假如相关的文件
 
 ### OLED 显示屏（Template2）
 
@@ -68,7 +68,7 @@
     |-- keilkill.bat    # 批处理清除编译产生的中间文件（可选）
 ```
 
-**说明：** 该模板只需要在 Template 基础项目工程文件中的 DRIVERS 文件夹中添加
+**说明：** 该模板只需要在 Template1 基础项目工程文件中的 DRIVERS 文件夹中添加
 LED、OLED、Key [相关的驱动函数](./OLED)就能实现驱动简单的 OLED 显示屏进行调试和拓展开发
 
 ## 资料下载参考
