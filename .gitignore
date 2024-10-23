@@ -1,14 +1,10 @@
 # vscode
-Template/.vscode/*
-!Template/.vscode/settings.json
-
-# Obj
-Template/Listings
-Template/Objects
-Template/DebugConfig
+Template/Template1/.vscode/*
+!Template/Template1/.vscode/settings.json
 
 # Project
-Template/STM32*
+Template/Template1/Projects/MDK-ARM/Listings
+Template/Template1/Projects/MDK-ARM/DebugConfig
 
 # My Config
 !.gitignore
