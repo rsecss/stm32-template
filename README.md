@@ -7,7 +7,7 @@
 ## Directory structure
 
 ```txt
-    |-- ARM             # 支持包和 F1 标准库
+    |-- ARM             # 支持包(.pack)和 F1 标准库
     |-- Reference       # 参考资料
     |-- Template        # 工程模板文件夹
         |-- Template1   # 工程模板1
@@ -52,13 +52,14 @@
 #### [工程模板（Template2）](./Template/Template2)
 
 ```txt
-    |-- Start           # 核心层和启动文件
-    |-- Library         # 标准库驱动
-    |-- Hardware        # 驱动层
-    |-- System          # 系统层
-    |-- User            # 用户层
-    |-- XXXX            # 工程文件（.uvprojx 和 .uvoptx 文件）    
-    |-- keilkill.bat    # 批处理文件
+    |-- CMSIS               # 核心层
+        |-- startup         # 启动文件
+    |-- STM32F10x_FWLib     # 标准库驱动
+    |-- Hardware            # 驱动层（未添加）
+    |-- System              # 系统层
+    |-- User                # 用户层
+    |-- XXXX                # 工程文件（.uvprojx 和 .uvoptx 文件）    
+    |-- keilkill.bat        # 批处理文件
 ```
 
 **说明：** 同 Template1，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹加入相关的文件
@@ -88,7 +89,7 @@
 
 ## Reference download
 
-可以从我上传的[reference文件夹](./Reference/)下载相关的资料，当然你也可在下面提供的官方网站和其他网站下载相关的参考资料，
+可以从我上传的[reference文件夹](./Reference/)下载相关的参考资料，当然你也可在下面提供的官方网站或者其他网站下载相关的参考资料，
 
 1. [Arm Keil | Devices-标准库下载](https://www.keil.arm.com/devices/)
 2. [资料下载——@江协科技](https://jiangxiekeji.com/download.html)
