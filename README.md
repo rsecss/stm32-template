@@ -24,7 +24,7 @@
 1. [手把手带你从零开始搭建工程（标准库版）——@程亦寻](https://blog.csdn.net/debug602/article/details/141183452)
 2. [用keil5新建STM32工程（超详细的图解操作）——@小治成长记](https://blog.csdn.net/qq_45390365/article/details/109016433)
 
-#### [工程模板（Template1，推荐）](./Template/Template1)
+#### [工程模板（Template1，推荐）](./Template/Template1.zip)
 
 ```txt
     |-- Drivers             # 驱动层
@@ -49,7 +49,7 @@
 4. 最后进入 Target 设置界面，选择 ARM 编译器`Use default compiler version 5`，不能选择默认的`Use default compiler version 6`，这样会导致编译不成功
 5. keilkill.bat 是批处理文件，主要是为了方便分享工程时，可以清除编译产生的中间文件，这个可选，具体看个人
 
-#### [工程模板（Template2）](./Template/Template2)
+#### [工程模板（Template2）](./Template/Template2.zip)
 
 ```txt
     |-- CMSIS               # 核心层
@@ -64,7 +64,7 @@
 
 **说明：** 同 Template1，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹加入相关的文件
 
-#### [OLED 显示屏模板（Template3）](./Template/Template3)
+#### [OLED 显示屏模板（Template3）](./Template/Template3.zip)
 
 ```txt
     |-- Drivers             # 驱动层
