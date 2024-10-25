@@ -4,6 +4,8 @@
 
 本仓库采用的是 STM32F103C8T6 芯片作为主控芯片，并且采用标准库进行代码的编写，包含一个基础的项目工程的模板和一个采用 OLED 显示屏搭建的调试工程模板，所提供的工程模板均通过本人成功编译链接能够正常使用，同时采用 MDK + Vscode进行开发调试，当然也可以只选择 MDK-ARM 进行开发和调试，看各人喜好啦。
 
+当然如果你想要查看或者学习其他与该模版相关的工程例程进行学习或者其他活动，可参考我的其他仓库[stm32f103c8t6-projects](https://github.com/rsecss/stm32f103c8t6-projects)
+
 ## Directory structure
 
 ```txt
@@ -94,10 +96,16 @@
 1. [Arm Keil | Devices-标准库下载](https://www.keil.arm.com/devices/)
 2. [资料下载——@江协科技](https://jiangxiekeji.com/download.html)
 
-## Contributors
+## Contributions
 
-如果上述提供的资料和模板出现问题，欢迎大家 PR 补充完善！
+如果上述提供的资料和模板出现问题，欢迎大家 Issue 和 PR ！
 
 总之，感谢广大的贡献者参与！
 
-## License
+## Acknowledgement
+
+XXX
+
+## Statement
+
+该仓库提供的任何资料或者源码仅供学习参考使用。倘若是用于其他用途出现问题，概不负责！
