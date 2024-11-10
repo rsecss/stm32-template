@@ -1,10 +1,14 @@
-# STM32 Templates
+# STM32 Templates——SPL
 
 ## Introduction
 
-本仓库采用的是 STM32F103C8T6 芯片作为主控芯片，并且采用标准库进行代码的编写，包含一个基础的项目工程的模板和一个采用 OLED 显示屏搭建的调试工程模板，所提供的工程模板均通过本人成功编译链接能够正常使用，同时采用 MDK + Vscode进行开发调试，当然也可以只选择 MDK-ARM 进行开发和调试，看各人喜好啦。
+本仓库采用的是 **STM32F103C8T6** 芯片作为主控芯片，并且采用 SPL 库（标准库）进行代码的编写，包含一个基础的项目工程的模板和一个采用 OLED 显示屏搭建的调试工程模板，所提供的工程模板均通过本人成功编译链接能够正常使用，同时采用 **MDK + Vscode** 进行开发，选择 **STLink** 进行调试。
 
 当然如果你想要查看或者学习其他与该模版相关的工程例程进行学习或者其他活动，可参考我的其他仓库[stm32f103c8t6-projects](https://github.com/rsecss/stm32f103c8t6-projects)
+
+## Usage
+
+直接 clone 项目到本地，根据需要选择你想要的模板然后打开 MDK 工程文件进行编译调试即可，最后根据自己的项目进行改进和使用。
 
 ## Directory structure
 
@@ -19,7 +23,7 @@
 
 ```
 
-### Template directory structure(Standard library)
+### Template directory structure
 
 **说明：** 我使用的基础工程模板目录结构主要有以下两种，分别是 Template1 和 Template2 选择哪一种目录结构进行构建工程看个人喜好，但是我更加推荐 Template1 这种目录结构。而 Template3 则是在第一个模板上面的进行修改，加了一些驱动函数，方便后序调试和拓展开发，同时下面的目录结构为大体框架，个人也可以根据实际情况进行调整，当然也可以参考以下两篇博客的配置方法教程：
 
@@ -47,7 +51,7 @@
 
 1. 在新建工程后需要将必要的文件添入到工程目录当中，同时将工程重命名
 2. 需要进入 C/C++ 设置界面，在 define 一栏输入全局宏定义 `USE_STDPERIPH_DRIVER` ，并在下面的 includepath 栏加入头文件路径 `.\Drives\CMSIS` `.\Drivers\STM32F10x_FWLib\inc` `.\User` `.\Drivers\BSP` `.\Drivers\SYSTEM` `.\Middlewares`
-3. 在 Debug 设置界面，根据实际选择仿真器，这里我选择的是 ST-Link Debugger，同时在旁边的设置中选择 Flash Download 勾选上 Reset and Run 按钮，方便后续的下载和操作
+3. 在 Debug 设置界面，根据实际选择仿真器，这里我选择的是 `ST-Link Debugger`，同时在旁边的设置中选择 Flash Download 勾选上 `Reset and Run` 按钮，方便后续的下载和操作
 4. 最后进入 Target 设置界面，选择 ARM 编译器`Use default compiler version 5`，不能选择默认的`Use default compiler version 6`，这样会导致编译不成功
 5. keilkill.bat 是批处理文件，主要是为了方便分享工程时，可以清除编译产生的中间文件，这个可选，具体看个人
 
@@ -100,7 +104,7 @@
 
 如果上述提供的资料和模板出现问题，欢迎大家 Issue 和 PR ！
 
-总之，感谢广大的贡献者参与！
+最后，感谢广大的贡献者参与贡献！
 
 ## Acknowledgement
 
