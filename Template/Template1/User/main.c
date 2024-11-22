@@ -25,11 +25,11 @@
 
 int main()
 {
-	while(1)
-	{
-		
-	}
-	
+    while(1)
+    {
+        
+    }
+    
 }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
