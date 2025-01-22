@@ -2,24 +2,24 @@
 
 ## Introduction
 
-本仓库采用的是 **STM32F103C8T6** 芯片作为主控芯片，并且采用 SPL 库（标准库）进行代码的编写，包含一个基础的项目工程的模板和一个采用 OLED 显示屏搭建的调试工程模板，所提供的工程模板均通过本人成功编译链接能够正常使用，同时采用 **MDK + Vscode** 进行开发，选择 **STLink** 进行调试。
+本仓库采用的是 **STM32F103C8T6** 芯片作为主控芯片，并且采用 SPL 库（标准库）进行代码的编写，包含一个基础的项目工程的模板和一个采用 OLED 显示屏搭建的调试工程模板，所提供的工程模板均通过本人成功编译链接能够正常使用，同时采用 **MDK + VsCode** 进行开发，选择 **STLink** 进行调试。
 
 当然如果你想要查看或者学习其他与该模版相关的工程例程进行学习或者其他活动，可参考我的其他仓库[stm32f103c8t6-projects](https://github.com/rsecss/stm32f103c8t6-projects)
 
 ## Usage
 
-直接 clone 项目到本地，根据需要选择你想要的模板然后打开 MDK 工程文件进行编译调试即可，最后根据自己的项目进行改进和使用。
+直接 clone 项目到本地，然后根据需要选择你想要的模板然后打开 MDK 工程文件进行编译调试即可，最后根据自己的项目进行改进和调用。
 
 ## Directory structure
 
-```txt
-    |-- ARM             # 支持包(.pack)和 F1 标准库
-    |-- Reference       # 参考资料
-    |-- Template        # 工程模板文件夹
-        |-- Template1   # 工程模板1
-        |-- Template2   # 工程模板2
-        |-- Template3   # OLED 工程模板
-    |-- Tools           # 工具软件
+```plaintext
+    |-- ARM                 # 支持包(.pack)和 F1 标准库
+    |-- Reference           # 参考资料
+    |-- Template/           # 工程模板文件夹
+        |-- Template1       # 工程模板 1
+        |-- Template2       # 工程模板 2
+        |-- Template3       # OLED 工程模板
+    |-- Tools               # 工具软件
 
 ```
 
@@ -32,16 +32,16 @@
 
 #### [工程模板（Template1，推荐）](./Template/Template1.zip)
 
-```txt
-    |-- Drivers             # 驱动层
-        |-- BSP             # 板级驱动层
-        |-- CMSIS           # 核心层
+```palintext
+    |-- Drivers/            # 驱动层
+        |-- BSP             # 板级驱动层（未新建）
+        |-- CMSIS/          # 核心层
             |-- startup     # 启动文件
         |-- STM32F10x_FWLib # 标准库驱动
-        |-- SYSTEM          # 系统层
+        |-- SYSTEM          # 系统层（未新建）
     |-- Middlewares         # 中间件层
     |-- Output              # 编译时产生的文件包括 .hex 文件
-    |-- Projects            
+    |-- Projects/           
         |-- MDK-ARM         # MDK 工程文件
     |-- User                # 用户层
     |-- keilkill.bat        # 批处理文件
@@ -53,39 +53,39 @@
 2. 需要进入 C/C++ 设置界面，在 define 一栏输入全局宏定义 `USE_STDPERIPH_DRIVER` ，并在下面的 includepath 栏加入头文件路径 `.\Drives\CMSIS` `.\Drivers\STM32F10x_FWLib\inc` `.\User` `.\Drivers\BSP` `.\Drivers\SYSTEM` `.\Middlewares`
 3. 在 Debug 设置界面，根据实际选择仿真器，这里我选择的是 `ST-Link Debugger`，同时在旁边的设置中选择 Flash Download 勾选上 `Reset and Run` 按钮，方便后续的下载和操作
 4. 最后进入 Target 设置界面，选择 ARM 编译器`Use default compiler version 5`，不能选择默认的`Use default compiler version 6`，这样会导致编译不成功
-5. keilkill.bat 是批处理文件，主要是为了方便分享工程时，可以清除编译产生的中间文件，这个可选，具体看个人
+5. keilkill.bat 是批处理文件，主要是为了方便分享工程时，可以清除编译产生的中间文件，这个可以视情况和选择
 
 #### [工程模板（Template2）](./Template/Template2.zip)
 
-```txt
-    |-- CMSIS               # 核心层
+```plaintext
+    |-- CMSIS/              # 核心层
         |-- startup         # 启动文件
     |-- STM32F10x_FWLib     # 标准库驱动
     |-- Hardware            # 驱动层（未添加）
     |-- System              # 系统层
     |-- User                # 用户层
-    |-- XXXX                # 工程文件（.uvprojx 和 .uvoptx 文件）    
+    |-- XXXX                # MDK 工程文件
     |-- keilkill.bat        # 批处理文件
 ```
 
-**说明：** 同 Template1，该模板不需要添加什么，只需要修改第二点中的 includepath  栏的头文件路径稍加修改就可以了，同时根据对应的文件夹加入相关的文件
+**说明：** 同 Template1，该模板不需要添加什么，只需要修改第二点中的 includepath 栏的头文件路径稍加修改就可以了，同时根据对应的文件夹加入相关的文件
 
 #### [OLED 显示屏模板（Template3）](./Template/Template3.zip)
 
-```txt
+```plaintext
     |-- Drivers             # 驱动层
-        |-- BSP             # 板级驱动层
+        |-- BSP/            # 板级驱动层
             |-- led         # led 驱动
             |-- key         # 按键驱动
             |-- oled        # oled 显示屏驱动
-        |-- CMSIS           # 核心层
+        |-- CMSIS/          # 核心层
             |-- startup     # 启动文件
         |-- STM32F10x_FWLib # 标准库驱动
-        |-- SYSTEM          # 系统层
+        |-- SYSTEM/         # 系统层
             |-- delay       # 延时函数
     |-- Middlewares         # 中间件层
     |-- Output              # 编译时产生的文件包括 .hex 文件
-    |-- Projects            
+    |-- Projects/           
         |-- MDK-ARM         # MDK 工程文件
     |-- User                # 用户层
     |-- keilkill.bat        # 批处理文件
@@ -102,7 +102,7 @@
 
 ## Contributions
 
-如果上述提供的资料和模板出现问题，欢迎大家 Issue 和 PR ！
+如果上述提供的资料和模板出现问题，欢迎大家 Issue 和 PR！
 
 最后，感谢广大的贡献者参与贡献！
 
@@ -112,4 +112,4 @@ XXX
 
 ## Statement
 
-该仓库提供的任何资料或者源码仅供学习参考使用。倘若是用于其他用途出现问题，概不负责！
+该仓库提供的任何资料或源码仅供学习参考使用。倘若是用于其他用途出现问题，概不负责！
